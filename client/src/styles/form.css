@@ -1,0 +1,279 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: inherit;
+  gap: 1em;
+  padding: 2em; /* Default padding */
+  border: 1px solid black;
+  border-radius: 20px;
+  max-width: 750px; /* Updated max-width */
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+  overflow: hidden;
+  margin: 1em auto; /* Center the form horizontally */
+}
+
+
+
+@media (max-width: 1024px) {
+  .form {
+    padding: 1.5em; 
+    border-radius: 15px; 
+    max-width: 650px;
+  }
+  .form-heading {
+    font-size: 1.5rem;
+  }
+  .input-field {
+    font-size: 1rem;
+  }
+  .show-plan {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 1em; 
+    border-radius: 10px;
+    width: 85%; 
+  }
+  .form-heading {
+    font-size: 1.25rem; 
+  }
+  .input-field {
+    font-size: 0.875rem; 
+  }
+  .show-plan {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 0.5em; 
+    border-radius: 5px; 
+    width: 85%; 
+  }
+  .form-heading {
+    font-size: 1rem; 
+  }
+  .input-field {
+    font-size: 0.75rem;
+  }
+  .show-plan {
+    width: 85%;
+  }
+}
+
+  .form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.pexels.com/photos/22305030/pexels-photo-22305030/free-photo-of-pile-of-euro-banknotes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; 
+    z-index: -1; 
+    border-radius: 20px;
+  }
+
+  .navbar {
+    background-color: #ffe4c4d2;
+    height: 5em;
+    margin-top: -1em;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  /* Dropdown Styles */
+  .dropdown {
+    width: 12rem;
+  }
+  
+  .dropdown-button {
+    font-size: 1rem;
+  }
+  
+  
+  
+  .form-heading {
+    text-align: center;
+    margin: 2em 1em 1em 0;
+    background-color: transparent;
+    align-self: center;
+  }
+  
+  .form-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 10px;
+    padding: 0.6em;
+    border: 1px solid rgba(255, 255, 255); /* Slightly transparent border */
+    outline: none;
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent white background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+  
+  .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #000000;
+    padding-inline: 1em;
+  }
+
+  .input-field::placeholder {
+    color: #343434;
+  }
+
+  .form-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    border-radius: 10px;
+    background-color: #0c203e;
+    padding: 0.6em;
+    color: white;
+    width: 75%;
+  }
+  .form-submit:hover{
+    background-color: #0a192f;
+  }
+
+  .show-plan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #0c203e;
+    margin: 2em;
+    padding: 1em;
+    color: white;
+    max-width: 750px;
+  }
+
+  .show-plan:hover{
+    background-color:#0a192f;
+  }
+  
+  .sendMessage-btn {
+    cursor: pointer;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #64ffda;
+    font-weight: bold;
+    outline: 1px solid #64ffda;
+    transition: all ease-in-out 0.3s;
+    width: 100%;
+  }
+  
+  .sendMessage-btn:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: #64ffda;
+    color: #000;
+    cursor: pointer;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+  
+  .form-card1 {
+    /* background-image: linear-gradient(163deg, #64ffda 0%, #64ffda 100%); */
+    border-radius: 22px;
+    transition: all 0.3s;
+  }
+    
+  .form-card2 {
+    border-radius: 0;
+    transition: all 0.2s;
+  }
+  
+  .form-card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+
+  .savings-plan {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 2em auto;
+    /* max-width: 600px; */
+    text-align: center; /* Center align the content inside .savings-plan */
+  }
+  
+  .savings-plan h2 {
+    margin: 0;
+    color: #0c203e;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .center-text {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    text-align: left; /* Align text to the left within .center-text */
+  }
+  
+  .savings-plan-details {
+    text-align: left; /* Align text to the left */
+  }
+  
+  .savings-plan-details p {
+    margin: 0.5em 0;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1em;
+    display: flex;
+  }
+  
+  .savings-plan-details p strong {
+    margin-right: 0.5em;
+  }
+  
+  .savings-value {
+    display: flex;
+    align-items: center;
+  }
+  
+  .download-button {
+    background-color: #0c203e;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+    display: inline-block; /* Ensure button behaves as a block element */
+    margin-top: 1em; /* Adjust margin as needed */
+  }
+  
+  .download-button:hover {
+    background-color: #092a5e;
+  }
+  
+  .download-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .download-icon {
+    margin-right: 0.5em;
+  }
+  

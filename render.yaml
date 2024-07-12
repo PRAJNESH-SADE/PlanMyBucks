@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: plan-my-bucks-app
+    env: python
+    buildCommand: ./server/build.sh
+    startCommand: gunicorn server.app:app
